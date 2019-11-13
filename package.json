@@ -1,10 +1,19 @@
 {
   "name": "session-auth-r",
   "version": "0.1.0",
+  "main": "server/index.js",
+  "proxy": "http://localhost:4001",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.0",
+    "bcrypt": "^3.0.6",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "massive": "^6.1.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0"
   },
   "scripts": {
