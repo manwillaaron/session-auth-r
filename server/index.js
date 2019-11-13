@@ -16,7 +16,7 @@ app.use(
     saveUninitialized: true,
     resave: false,
     cookie: {
-    maxAge: 1000 * 60 * 60 * 24 * 36
+    maxAge: 1000 * 60 * 60 * 24 * 365
     }
   })
 );
@@ -26,3 +26,9 @@ massive(CONNECTION_STRING).then(db => {
   console.log("db is all good");
   app.listen(SERVER_PORT, () => console.log(`${SERVER_PORT} is listening`));
 });
+
+
+app.post('/auth/user', ac.register)
+app.post('/auth/login/user', ac.login)
+app.delete('/auth/user', ac.logout)
+// app.get('/api/user', )
